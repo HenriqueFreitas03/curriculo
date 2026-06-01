@@ -1,0 +1,58 @@
+/* O fundo da página: cores contrastantes */
+body {
+  background-color: #f0f0f0; /* Um cinza claro de concreto */
+  font-family: 'Courier New', Courier, monospace; /* Fontes mono parecem código/maquina de escrever */
+  color: #000000;
+  padding: 40px 20px;
+}
+
+/* O container principal do seu currículo */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Títulos marcantes e gigantes */
+.titulo-brutal {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #ffde4d; /* Amarelo brutalista marcante */
+  display: inline-block;
+  padding: 10px 20px;
+  border: 4px solid #000000;
+  /* A famosa sombra dura: deslocada 6px para direita e 6px para baixo */
+  box-shadow: 6px 6px 0px 0px #000000; 
+  margin-bottom: 40px;
+}
+
+/* O Card de Experiência / Projetos */
+.card-brutal {
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 8px 8px 0px 0px #000000; /* Sombra sólida preta */
+  transition: transform 0.1s ease; /* Efeito rápido de clique */
+}
+
+/* Os botões de links (GitHub, Linkedin) */
+.botao-brutal {
+  background-color: #387adf; /* Azul vibrante */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* INTERAÇÃO BRUTALISTA: O botão afunda de verdade quando passa o mouse/clica */
+.botao-brutal:hover {
+  /* Remove o deslocamento da sombra e move o botão exatamente para a posição dela */
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #000000;
+}
