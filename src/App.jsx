@@ -13,11 +13,11 @@ export default function App() {
         flexWrap: 'wrap',
         gap: '10px'
       }}>
-        <a href="#projetos" className="botao-brutal" style={{ fontSize: '0.85rem' }}>
-          [ PROJETOS EM DESTAQUE ]
-        </a>
         <a href="#resumo" className="botao-brutal" style={{ fontSize: '0.85rem' }}>
           [ RESUMO ]
+        </a>
+         <a href="#projetos" className="botao-brutal" style={{ fontSize: '0.85rem' }}>
+          [ PROJETOS EM DESTAQUE ]
         </a>
         <a href="#tech-stack" className="botao-brutal" style={{ fontSize: '0.85rem' }}>
           [ TECH STACKS ]
