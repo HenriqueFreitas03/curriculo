@@ -1,3 +1,8 @@
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
 /* RESET BÁSICO */
 * {
   box-sizing: border-box;
@@ -16,6 +21,12 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* ESPAÇO NO TOPO PARA NAVEGAÇÃO POR ÂNCORA */
+section[id],
+div[id] {
+  scroll-margin-top: 30px;
 }
 
 /* TÍTULO PRINCIPAL: Agora com fundo Preto e Borda Branca */
