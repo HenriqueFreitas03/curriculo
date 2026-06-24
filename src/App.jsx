@@ -7,7 +7,7 @@ export default function App() {
       
       {/* HEADER BRUTALISTA */}
       <header style={{ marginBottom: '40px' }}>
-        <h1 className="titulo-brutal">{dados.nome}</h1>
+        <h1 className="titulo-brutal">Portfolio.</h1>
         <p style={{ fontSize: '1.6rem', fontWeight: '900', textTransform: 'uppercase', margin: '15px 0 10px 0' }}>
           {dados.subtitulo}
         </p>
