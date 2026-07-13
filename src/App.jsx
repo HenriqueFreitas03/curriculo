@@ -1,4 +1,6 @@
 import { dados } from './data/curriculo';
+import Scrollytelling from './components/Scrollytelling';
+import Starfield from './components/Starfield';
 
 export default function App() {
   return (
@@ -22,6 +24,10 @@ export default function App() {
         <a href="#tech-stack" className="botao-brutal" style={{ fontSize: '0.85rem' }}>
           [ TECH STACKS ]
         </a>
+        {/*<a href="#scrollytelling" className="botao-brutal" style={{ fontSize: '0.85rem'}}>
+          [ EXPLORE O UNIVERSO ]
+        </a>*/}
+        
       </nav>
 
       {/* HEADER */}
@@ -108,6 +114,10 @@ export default function App() {
           ))}
         </div>
       </section>
+
+      {/* SCROLLYTELLING - EXPLORAÇÃO CÓSMICA */}
+      <Starfield starCount={250} speed={0.2} />
+    
 
       {/* FORMAÇÃO */}
       <section style={{ marginBottom: '40px' }}>

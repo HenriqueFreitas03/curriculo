@@ -1,0 +1,301 @@
+/* =========================================
+   SCROLLYTELLING - COSMIC THEME
+   ========================================= */
+
+.scrolly-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 0 60px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ---- HEADER ---- */
+.scrolly-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.scrolly-main-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow: 0 0 40px rgba(255, 107, 107, 0.4);
+  margin-bottom: 15px;
+}
+
+.scrolly-bracket {
+  color: #ff6b6b;
+  font-size: 3.2rem;
+}
+
+.scrolly-main-subtitle {
+  font-size: 1.1rem;
+  color: #a8a8b3;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.scrolly-scroll-hint {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #333;
+  color: #666;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  animation: pulse-hint 2s ease-in-out infinite;
+}
+
+@keyframes pulse-hint {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ---- TIMELINE ---- */
+.scrolly-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.scrolly-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #333 5%,
+    #555 50%,
+    #333 95%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+/* ---- INDIVIDUAL SECTION ---- */
+.scrolly-section {
+  position: relative;
+  margin-bottom: 80px;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scrolly-section.from-left {
+  transform: translateX(-60px);
+}
+
+.scrolly-section.from-right {
+  transform: translateX(60px);
+}
+
+.scrolly-section.scrolly-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- DIVIDER ---- */
+.scrolly-divider {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  border-top: 2px dashed;
+  opacity: 0.4;
+}
+
+/* ---- CONNECTOR (dots on timeline) ---- */
+.scrolly-connector {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrolly-connector-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* ---- CARD ---- */
+.scrolly-card {
+  position: relative;
+  background: #19191c;
+  border: 2px solid #2a2a2e;
+  border-left: 4px solid var(--accent, #ff6b6b);
+  padding: 30px 35px;
+  margin-left: 55%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrolly-card:hover {
+  border-color: var(--accent, #ff6b6b);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6), 0 0 30px color-mix(in srgb, var(--accent, #ff6b6b) 15%, transparent);
+}
+
+.scrolly-section.from-right .scrolly-card {
+  margin-left: 0;
+  margin-right: 55%;
+  border-left: 2px solid #2a2a2e;
+  border-right: 4px solid var(--accent, #ff6b6b);
+}
+
+/* ---- ICON ---- */
+.scrolly-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 8px var(--accent, #ff6b6b));
+}
+
+/* ---- CONTENT ---- */
+.scrolly-subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.scrolly-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.scrolly-text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #a8a8b3;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---- GLOW EFFECT ---- */
+.scrolly-glow {
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.scrolly-section.from-right .scrolly-glow {
+  right: auto;
+  left: -30%;
+}
+
+/* ---- FOOTER ---- */
+.scrolly-footer-text {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .scrolly-main-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .scrolly-bracket {
+    font-size: 2rem;
+  }
+
+  .scrolly-timeline-line {
+    left: 20px;
+  }
+
+  .scrolly-card {
+    margin-left: 45px !important;
+    margin-right: 0 !important;
+    border-left: 4px solid var(--accent, #ff6b6b) !important;
+    border-right: 2px solid #2a2a2e !important;
+    padding: 20px;
+  }
+
+  .scrolly-section.from-right .scrolly-card {
+    margin-left: 45px !important;
+    margin-right: 0 !important;
+  }
+
+  .scrolly-connector {
+    left: 20px;
+  }
+
+  .scrolly-section.from-left,
+  .scrolly-section.from-right {
+    transform: translateX(30px);
+  }
+
+  .scrolly-section.scrolly-visible {
+    transform: translateX(0);
+  }
+
+  .scrolly-icon {
+    font-size: 1.8rem;
+  }
+
+  .scrolly-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrolly-main-title {
+    font-size: 1.4rem;
+  }
+
+  .scrolly-card {
+    margin-left: 35px !important;
+    padding: 15px;
+  }
+
+  .scrolly-connector {
+    left: 15px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .scrolly-connector-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrolly-timeline-line {
+    left: 15px;
+  }
+}
