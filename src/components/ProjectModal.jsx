@@ -20,7 +20,7 @@ export default function ProjectModal({ projeto, onClose }) {
           {projeto.imagem ? (
             <img src={projeto.imagem} alt={projeto.titulo} />
           ) : (
-            <span className="placeholder">[  ]</span>
+            <span className="placeholder">[ --- ]</span>
           )}
         </div>
         <div className="modal-title">{projeto.titulo}</div>
