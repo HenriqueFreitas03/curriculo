@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { dados } from './data/curriculo';
 import ProjectModal from './components/ProjectModal';
+import Decorations from './components/Decorations';
 
 export default function App() {
   const [projetoSelecionado, setProjetoSelecionado] = useState(null);
 
   return (
     <div className="container">
+
+      <Decorations />
 
       {/* NAVEGAÇÃO RÁPIDA */}
       <nav>
