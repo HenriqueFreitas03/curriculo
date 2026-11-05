@@ -21,27 +21,42 @@ export const dados = {
     {
       titulo: "MÁQUINA VIRTUAL & INTERPRETADOR BINÁRIO",
       tags: "Java / Hardware Virtual",
-      desc: "Desenvolvimento de um emulador de hardware completo do zero: Memória RAM isolada gerenciando ponteiros, Processador decodificando Opcodes nativos em tempo real (Método B) com IO de caracteres, e Interpretador de arquivos capaz de gerenciar desvios de fluxo e loops complexos de leitura para frente e para trás em arquivos binários (.bin)."
+      desc: "Desenvolvimento de um emulador de hardware completo do zero: Memória RAM isolada gerenciando ponteiros, Processador decodificando Opcodes nativos em tempo real (Método B) com IO de caracteres, e Interpretador de arquivos capaz de gerenciar desvios de fluxo e loops complexos de leitura para frente e para trás em arquivos binários (.bin).",
+      imagem: null,
+      detalhes: "Emulador de hardware construído do zero: memória RAM isolada com gerenciamento de ponteiros, processador decodificando Opcodes nativos em tempo real (Método B) com I/O de caracteres e interpretador de arquivos binários (.bin) com suporte a desvios de fluxo e loops complexos de leitura para frente e para trás.",
+      link: null
     },
     {
       titulo: "SISTEMA DE PREVISÃO DE VENDAS PARA VAREJO",
       tags: "Spring Boot / API RESTful",
-      desc: "Desenvolvimento de uma API RESTful utilizando dados reais de uma panificadora para predição de demanda. Integração com banco de dados e aplicação de Design Patterns para garantir o desacoplamento e a manutenção do código."
+      desc: "Desenvolvimento de uma API RESTful utilizando dados reais de uma panificadora para predição de demanda. Integração com banco de dados e aplicação de Design Patterns para garantir o desacoplamento e a manutenção do código.",
+      imagem: null,
+      detalhes: "API RESTful construída com Spring Boot a partir de dados reais de uma panificadora, com predição de demanda, integração com banco de dados relacional e aplicação de Design Patterns para desacoplamento e manutenibilidade.",
+      link: null
     },
     {
       titulo: "PADRONIZAÇÃO E CONTEINERIZAÇÃO COM DOCKER",
       tags: "DevOps / Full Stack",
-      desc: "Implementação e configuração de ambientes isolados usando Docker e Docker Compose para aplicações Full Stack (Unindo API Java, Front End e Bancos de Dados), garantindo paridade total entre desenvolvimento e produção."
+      desc: "Implementação e configuração de ambientes isolados usando Docker e Docker Compose para aplicações Full Stack (Unindo API Java, Front End e Bancos de Dados), garantindo paridade total entre desenvolvimento e produção.",
+      imagem: null,
+      detalhes: "Ambientes isolados com Docker e Docker Compose unindo API Java, Front End e bancos de dados, garantindo paridade total entre desenvolvimento e produção.",
+      link: null
     },
     {
       titulo: "INTERFACE GRÁFICA DESKTOP (JAVA SWING)",
       tags: "Java / POO Pura",
-      desc: "Criação de um jogo de 'Campo Minado' utilizando conceitos puros de Orientação a Objetos, gerenciamento de estados e manipulação de eventos em Java."
+      desc: "Criação de um jogo de 'Campo Minado' utilizando conceitos puros de Orientação a Objetos, gerenciamento de estados e manipulação de eventos em Java.",
+      imagem: null,
+      detalhes: "Jogo de Campo Minado desenvolvido em Java puro com Swing, aplicando Orientação a Objetos, gerenciamento de estados e manipulação de eventos.",
+      link: null
     },
     {
       titulo: "SISTEMA DESKTOP FINANCEIRO COM INTERFACES & DASHBOARD",
       tags: "Java Swing / SQLite / JDBC",
-      desc: "Desenvolvimento de uma aplicação desktop para gestão financeira e auditoria. Implementou um motor de ETL nativo para ler, sanitizar e importar dados de planilhas Excel para um banco relacional local SQLite via JDBC. O sistema conta com uma interface gráfica completa contendo tabelas dinâmicas, geração de relatórios de pagamentos/taxas e um dashboard visual para análise de fluxo de caixa."
+      desc: "Desenvolvimento de uma aplicação desktop para gestão financeira e auditoria. Implementou um motor de ETL nativo para ler, sanitizar e importar dados de planilhas Excel para um banco relacional local SQLite via JDBC. O sistema conta com uma interface gráfica completa contendo tabelas dinâmicas, geração de relatórios de pagamentos/taxas e um dashboard visual para análise de fluxo de caixa.",
+      imagem: null,
+      detalhes: "Aplicação desktop de gestão financeira com motor de ETL nativo (Excel → SQLite via JDBC), tabelas dinâmicas, relatórios de pagamentos/taxas e dashboard visual de fluxo de caixa.",
+      link: null
     }
   ],
   certificados: [
