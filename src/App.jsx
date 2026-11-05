@@ -73,7 +73,7 @@ export default function App() {
               {p.imagem ? (
                 <img src={p.imagem} alt={p.titulo} />
               ) : (
-                <span className="placeholder">[ SLOT_DE_FOTO — INSIRA UMA IMAGEM ]</span>
+                <span className="placeholder">[ --- ]</span>
               )}
             </div>
             <div style={{
