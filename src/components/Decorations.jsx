@@ -1,6 +1,6 @@
 const Dec = ({ viewBox, w, h, top, left, opacity = 0.35, children }) => (
   <div className="dec" style={{ top, left, width: w, height: h, opacity }}>
-    <svg viewBox={viewBox} stroke="white" strokeWidth="1" fill="none">
+    <svg viewBox={viewBox} stroke="white" strokeWidth="1" fill="none" strokeLinecap="round" strokeLinejoin="round">
       {children}
     </svg>
   </div>
@@ -9,41 +9,77 @@ const Dec = ({ viewBox, w, h, top, left, opacity = 0.35, children }) => (
 export default function Decorations() {
   return (
     <div className="decorations">
-      <Dec viewBox="0 0 80 50" w={80} h={50} top="24px" left="24px">
+      {/* CLUSTER SUPERIOR DIREITO — cubos, cristais e pontos conectados */}
+      <Dec viewBox="0 0 220 160" w={220} h={160} top="40px" left="620px" opacity={0.45}>
+        {/* cubos wireframe */}
+        <path d="M20 40 L40 20 L60 40 L40 60 Z M20 40 L40 60 L20 60 L0 40 Z" />
+        <path d="M80 30 L100 10 L120 30 L100 50 Z M80 30 L100 50 L80 50 L60 30 Z" />
+        <path d="M140 50 L160 30 L180 50 L160 70 Z M140 50 L160 70 L140 70 L120 50 Z" />
+        <path d="M20 100 L40 80 L60 100 L40 120 Z M20 100 L40 120 L20 120 L0 100 Z" />
+        <path d="M80 110 L100 90 L120 110 L100 130 Z" />
+        {/* cristal grande */}
+        <path d="M180 20 L200 0 L220 30 L200 60 L180 30 Z" />
+        <path d="M180 20 L200 60 L180 60 L160 30 Z" />
+        <path d="M200 0 L220 30 L200 90 L180 60 Z" />
+        {/* pontos flutuantes conectados por linhas finas */}
+        <circle cx="30" cy="20" r="1.5" />
+        <circle cx="50" cy="10" r="1.5" />
+        <circle cx="70" cy="25" r="1.5" />
+        <circle cx="90" cy="15" r="1.5" />
+        <line x1="30" y1="20" x2="50" y2="10" />
+        <line x1="50" y1="10" x2="70" y2="25" />
+        <line x1="70" y1="25" x2="90" y2="15" />
+        <circle cx="130" cy="60" r="1.5" />
+        <circle cx="150" cy="50" r="1.5" />
+        <circle cx="170" cy="65" r="1.5" />
+        <line x1="130" y1="60" x2="150" y2="50" />
+        <line x1="150" y1="50" x2="170" y2="65" />
+        <circle cx="190" cy="35" r="1.5" />
+        <line x1="170" y1="65" x2="190" y2="35" />
+      </Dec>
+
+      {/* CLUSTER INFERIOR ESQUERDO — ondas, barra de áudio e pontos */}
+      <Dec viewBox="0 0 200 100" w={200} h={100} top="620px" left="0px" opacity={0.4}>
+        <path d="M0 60 Q40 20 80 60 T160 60 T200 60" />
+        <rect x="10" y="40" width="4" height="12" />
+        <rect x="20" y="30" width="4" height="22" />
+        <rect x="30" y="45" width="4" height="7" />
+        <rect x="40" y="20" width="4" height="32" />
+        <rect x="50" y="50" width="4" height="2" />
+        <rect x="60" y="25" width="4" height="27" />
+        <circle cx="150" cy="80" r="2" />
+        <circle cx="170" cy="70" r="2" />
+        <circle cx="190" cy="85" r="2" />
+      </Dec>
+
+      {/* CLUSTER INFERIOR DIREITO — barras horizontais, EST. e bordas */}
+      <Dec viewBox="0 0 220 60" w={220} h={60} top="900px" left="780px" opacity={0.45}>
+        <rect x="0" y="5" width="140" height="2" />
+        <rect x="0" y="15" width="90" height="2" />
+        <rect x="0" y="25" width="50" height="2" />
+        <rect x="0" y="35" width="30" height="2" />
+        <text x="160" y="52" fontSize="10" fontFamily="monospace" fill="white" letterSpacing="2">EST. 2100</text>
+        <line x1="160" y1="48" x2="210" y2="48" />
+      </Dec>
+
+      {/* Canto superior esquerdo — globo e linhas */}
+      <Dec viewBox="0 0 80 50" w={80} h={50} top="20px" left="20px" opacity={0.35}>
         <ellipse cx="40" cy="25" rx="36" ry="22" />
         <path d="M4 25 Q40 4 76 25 T40 46 T4 25" />
         <line x1="14" y1="12" x2="66" y2="12" />
         <line x1="14" y1="38" x2="66" y2="38" />
+        <line x1="40" y1="3" x2="40" y2="47" />
       </Dec>
 
-      <Dec viewBox="0 0 140 120" w={140} h={120} top="120px" left="20px" opacity={0.3}>
-        <rect x="4" y="4" width="132" height="112" rx="4" />
-        <path d="M4 4 L136 4 L140 8 L140 132 L8 136 Z" />
-        <line x1="10" y1="10" x2="130" y2="10" />
-        <line x1="10" y1="65" x2="130" y2="65" />
-        <line x1="10" y1="120" x2="130" y2="120" />
-        <line x1="10" y1="10" x2="10" y2="120" />
-        <line x1="70" y1="10" x2="70" y2="120" />
-        <line x1="130" y1="10" x2="130" y2="120" />
-      </Dec>
-
-      <Dec viewBox="0 0 120 100" w={120} h={100} top="60px" left="520px" opacity={0.35}>
-        <path d="M30 30 L50 10 L70 30 L50 50 Z" />
-        <path d="M70 30 L90 10 L110 30 L90 50 Z" />
-        <path d="M30 60 L50 40 L70 60 L50 80 Z" />
-        <path d="M70 60 L90 40 L110 60 L90 80 Z" />
-      </Dec>
-
-      <Dec viewBox="0 0 60 60" w={60} h={60} top="20px" left="860px" opacity={0.4}>
+      {/* Canto superior direito — X e raio */}
+      <Dec viewBox="0 0 60 60" w={60} h={60} top="20px" left="920px" opacity={0.4}>
         <path d="M10 5 L45 30 L20 30 L50 55 Z" />
-      </Dec>
-
-      <Dec viewBox="0 0 40 40" w={40} h={40} top="20px" left="930px" opacity={0.35}>
         <line x1="5" y1="5" x2="35" y2="35" />
         <line x1="35" y1="5" x2="5" y2="35" />
       </Dec>
 
-      <Dec viewBox="0 0 60 140" w={60} h={140} top="250px" left="900px" opacity={0.35}>
+      {/* Triângulos grade — direita média */}
+      <Dec viewBox="0 0 60 160" w={60} h={160} top="300px" left="940px" opacity={0.35}>
         <path d="M10 10 L30 10 L20 30 Z" />
         <path d="M10 50 L30 50 L20 70 Z" />
         <path d="M10 90 L30 90 L20 110 Z" />
@@ -54,45 +90,26 @@ export default function Decorations() {
         <path d="M30 130 L50 130 L40 110 Z" />
       </Dec>
 
-      <Dec viewBox="0 0 60 80" w={60} h={80} top="650px" left="900px" opacity={0.35}>
-        <path d="M5 75 L65 15" />
-        <path d="M5 65 L65 5" />
-        <path d="M5 55 L65 -5" />
-      </Dec>
-
-      <Dec viewBox="0 0 140 40" w={140} h={40} top="880px" left="820px" opacity={0.4}>
-        <rect x="10" y="5" width="120" height="4" />
-        <rect x="10" y="15" width="80" height="4" />
-        <rect x="10" y="25" width="40" height="4" />
-        <text x="100" y="36" fontSize="10" fontFamily="monospace" fill="white">EST. 2100</text>
-      </Dec>
-
-      <Dec viewBox="0 0 100 40" w={100} h={40} top="860px" left="20px" opacity={0.35}>
+      {/* Linhas pontilhadas diagonais — borda inferior esquerda */}
+      <Dec viewBox="0 0 100 40" w={100} h={40} top="860px" left="0px" opacity={0.35}>
         <path d="M0 30 Q25 5 50 30 T100 30" />
+        <path d="M10 30 Q35 5 60 30 T90 30" />
       </Dec>
 
-      {[
-        { t: '12%', l: '8%' },
-        { t: '34%', l: '45%' },
-        { t: '67%', l: '22%' },
-        { t: '89%', l: '78%' },
-        { t: '15%', l: '92%' },
-        { t: '56%', l: '60%' },
-        { t: '78%', l: '33%' },
-        { t: '42%', l: '88%' },
-      ].map((p, i) => (
+      {/* Estrelas/pontos dispersos */}
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
         <div
           key={i}
           className="dec star"
           style={{
             position: 'absolute',
-            width: '3px',
-            height: '3px',
+            width: '2px',
+            height: '2px',
             background: 'white',
             borderRadius: '50%',
-            opacity: 0.25 + (i % 3) * 0.1,
-            top: p.t,
-            left: p.l,
+            opacity: 0.2 + (i % 4) * 0.15,
+            top: `${10 + (i * 9)}%`,
+            left: `${5 + (i * 11)}%`,
           }}
         />
       ))}
